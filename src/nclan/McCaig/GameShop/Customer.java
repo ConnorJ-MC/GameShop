@@ -16,8 +16,8 @@ public class Customer {
         return discountEligible;
     }
 
-    public void setDiscountEligible(boolean discountEligible) {
-        this.discountEligible = discountEligible;
+    public void setDiscountEligible(boolean eligible) {
+        this.discountEligible = eligible;
     }
 
     public String getAddress() {
@@ -36,8 +36,8 @@ public class Customer {
 
     private String name;
     private String address;
-    private boolean discountEligible = false;
-    ArrayList<String> Game;
+    private boolean discountEligible;
+//    ArrayList<String> Game;
 
     @Override
     public String toString() {

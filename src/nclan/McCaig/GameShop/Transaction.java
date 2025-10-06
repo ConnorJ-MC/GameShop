@@ -20,12 +20,10 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction{" +
-                "transactionType='" + transactionType + '\'' +
-                ", transactionDate='" + transactionDate + '\'' +
-                ", customerName='" + customerName + '\'' +
-                ", gameTitle='" + gameTitle + '\'' +
-                '}';
+        return transactionType +
+                ", " + transactionDate +
+                ", " + customerName +
+                ", " + gameTitle;
     }
 
 }

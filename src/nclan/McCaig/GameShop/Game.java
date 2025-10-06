@@ -39,7 +39,7 @@ public class Game {
     }
 
     public void setQuantity(int quantity) {
-        this.quantity = quantity;
+        this.quantity = Math.min(quantity, 10);
     }
 
     public double getPrice() {
@@ -52,13 +52,11 @@ public class Game {
 
     @Override
     public String toString() {
-        return "Game{" +
-                "name='" + name + '\'' +
-                ", console='" + console + '\'' +
-                ", releaseYear=" + releaseYear +
-                ", quantity=" + quantity +
-                ", price=" + price +
-                '}';
+        return name +
+                ", " + console +
+                ", " + releaseYear +
+                ", " + quantity + " copies" +
+                ", £" + price;
     }
 
     private String name;
