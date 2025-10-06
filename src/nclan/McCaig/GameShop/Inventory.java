@@ -1,15 +1,27 @@
 package nclan.McCaig.GameShop;
 
-public class Inventory extends Game{
+import java.util.ArrayList;
 
-    public Inventory(String name, String console, int releaseYear, int quantity, double price) {
-        super(name, console, releaseYear, quantity, price);
+public class Inventory {
+    private ArrayList<Game> allGames = new ArrayList<>();
+
+    public Inventory() {
+
     }
 
-    public void LimitStock(int quantity) {
+    public boolean addStock(Game g) {
+        if(limitStock(1))
+            return allGames.add(g);
+        else
+            return false;
+    }
+
+    public boolean limitStock(int quantity) {
         if (quantity < 10) {
             quantity = 10;
-        }
+            return true;
+        } else
+            return false;
     }
 
 

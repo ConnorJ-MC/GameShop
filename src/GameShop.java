@@ -71,8 +71,9 @@ public class GameShop {
 
         System.out.println();
         System.out.println("customers:");
-        System.out.println(c1.getName() + ", " + c1.getAddress());
-        System.out.println(c2.getName() + ", " + c2.getAddress());
+//        System.out.println(c1.getName() + ", " + c1.getAddress());
+//        System.out.println(c2.getName() + ", " + c2.getAddress());
         System.out.println(c3.getName() + ", " + c3.getAddress());
+        System.out.println(c1);
     }
 }

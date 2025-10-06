@@ -8,9 +8,9 @@ public class Transaction {
     private String gameTitle;
 
     public Transaction(String transactionType,
-                                                String transactionDate,
-                                                String customerName,
-                                                String gameTitle)
+                       String transactionDate,
+                       String customerName,
+                       String gameTitle)
     {
         this.transactionType = transactionType;
         this.transactionDate = transactionDate;
