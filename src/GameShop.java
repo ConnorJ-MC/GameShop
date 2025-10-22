@@ -3,13 +3,24 @@ import nclan.McCaig.GameShop.Game;
 import nclan.McCaig.GameShop.Inventory;
 import nclan.McCaig.GameShop.Transaction;
 
+/**
+ * @author 30202291
+ */
 public class GameShop {
+
+    /**
+     *
+     * @param args to set things off
+     */
     public static void main(String[] args) {
         GameShop myApp = new GameShop();
 
         myApp.testShop();
     }
 
+    /**
+     * setting up customers and games, then "creating" and printing their transactions
+     */
     public void testShop() {
         System.out.println();
 

@@ -1,5 +1,8 @@
 package nclan.McCaig.GameShop;
 
+/**
+ * @author 30202291
+ */
 public class Game {
 
     public Game(String name, String console, int releaseYear, int quantity, double price) {

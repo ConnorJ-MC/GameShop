@@ -1,5 +1,8 @@
 package nclan.McCaig.GameShop;
 
+/**
+ * @author 30202291
+ */
 public class Transaction {
 
     private String transactionType;
@@ -36,6 +39,12 @@ public class Transaction {
         }
     }
 
+    /**
+     *
+     * @param g the game
+     * @param c the customer
+     * @param s the type of transaction
+     */
     public void transactionMade(Game g, Customer c, String s) {
         if (s.equals("trade")) {
             g.setQuantity(g.getQuantity() + 1);

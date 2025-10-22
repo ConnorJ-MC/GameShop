@@ -1,5 +1,8 @@
 package nclan.McCaig.GameShop;
 
+/**
+ * @author 30202291
+ */
 public class Customer {
 
     public String getName() {
