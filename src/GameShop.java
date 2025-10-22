@@ -1,4 +1,7 @@
-import nclan.McCaig.GameShop.*;
+import nclan.McCaig.GameShop.Customer;
+import nclan.McCaig.GameShop.Game;
+import nclan.McCaig.GameShop.Inventory;
+import nclan.McCaig.GameShop.Transaction;
 
 public class GameShop {
     public static void main(String[] args) {
@@ -17,7 +20,7 @@ public class GameShop {
         Inventory in = new Inventory();
         Transaction ts = new Transaction();
 
-        Game zelda = new Game("Zelda", "NES", 1987, 5, 20.00);
+        Game zelda = new Game("Zelda", "NES", 1987, 11, 20.00);
         in.addStock(zelda);
         Game marioKart = new Game("Mario Kart", "SNES", 1992, 3, 30.00);
         in.addStock(marioKart);

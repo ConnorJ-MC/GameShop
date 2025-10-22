@@ -1,7 +1,5 @@
 package nclan.McCaig.GameShop;
 
-import java.util.ArrayList;
-
 public class Customer {
 
     public String getName() {
@@ -20,14 +18,6 @@ public class Customer {
         this.discountEligible = eligible;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public Customer(String name, String address, boolean discountEligible) {
         this.name = name;
         this.address = address;
@@ -37,11 +27,10 @@ public class Customer {
     private String name;
     private String address;
     private boolean discountEligible;
-//    ArrayList<String> Game;
 
     @Override
     public String toString() {
-        return  "name='" + name + '\'' +
+        return "name='" + name + '\'' +
                 ", address='" + address;
     }
 

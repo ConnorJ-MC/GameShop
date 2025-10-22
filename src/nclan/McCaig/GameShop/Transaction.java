@@ -1,7 +1,5 @@
 package nclan.McCaig.GameShop;
 
-import java.util.ArrayList;
-
 public class Transaction {
 
     private String transactionType;
@@ -14,8 +12,7 @@ public class Transaction {
     public Transaction(String transactionType,
                        String transactionDate,
                        String customerName,
-                       String gameTitle)
-    {
+                       String gameTitle) {
         this.transactionType = transactionType;
         this.transactionDate = transactionDate;
         this.customerName = customerName;

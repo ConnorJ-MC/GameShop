@@ -6,22 +6,13 @@ public class Inventory {
     private ArrayList<Game> allGames = new ArrayList<>();
 
     public Inventory() {
-
     }
 
     public boolean addStock(Game g) {
-        if(limitStock(g.getQuantity()))
+        if (g.getQuantity() > 10) {
+            g.setQuantity(10);
             return allGames.add(g);
-        else
-            return false;
-    }
-
-    public boolean limitStock(int quantity) {
-        if (quantity < 10) {
-            quantity = 10;
-            return true;
-        } else
-            return false;
+        } else return allGames.add(g);
     }
 
     public void printInventory() {
