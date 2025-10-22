@@ -47,38 +47,5 @@ public class GameShop {
         System.out.println();
 
         in.printInventory();
-        System.out.println();
-//
-//        double priceMario = c3.isDiscountEligible() ? marioKart.getPrice() * 0.90 : marioKart.getPrice();
-//        marioKart.setQuantity(marioKart.getQuantity() - 1);
-//        c3.setDiscountEligible(false);
-//        transactions[i++] = new Transaction("Purchase", "06/10/25", c3.getName(), marioKart.getName());
-//
-//        double priceBanjo = c1.isDiscountEligible() ? banjoKazoo.getPrice() * 0.90 : banjoKazoo.getPrice();
-//        banjoKazoo.setQuantity(banjoKazoo.getQuantity() - 1);
-//        transactions[i++] = new Transaction("Purchase", "06/10/25", c1.getName(), banjoKazoo.getName());
-
-//        System.out.println();
-//        System.out.println("transaction record:");
-//        for (Transaction t : transactions) {
-//            System.out.println(t);
-//        }
-
-//        System.out.println();
-//        System.out.println("final inventory:");
-//        for (Game g : inventory) {
-//            if (!(g.getQuantity() <= 0)) {
-//                System.out.println(g);
-//            }
-//        }
-
-//        System.out.println();
-//        System.out.println("customers:");
-//        System.out.println(c1.getName() + ", " + c1.getAddress());
-//        System.out.println(c2.getName() + ", " + c2.getAddress());
-//        System.out.println(c3.getName() + ", " + c3.getAddress());
-//        System.out.println(c1);
-
-
     }
 }
