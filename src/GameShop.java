@@ -15,7 +15,7 @@ public class GameShop {
 
         Customer c1 = new Customer("manager", "admin office", false);
         Customer c2 = new Customer("jamie", "3d street", false);
-        Customer c3 = new Customer("ron", "12 oak road", false);
+        Customer c3 = new Customer("rohn", "12 oak road", false);
 
         Inventory in = new Inventory();
         Transaction ts = new Transaction();
