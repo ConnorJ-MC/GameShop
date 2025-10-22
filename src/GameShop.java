@@ -35,7 +35,7 @@ public class GameShop {
         in.addStock(zelda);
         Game marioKart = new Game("Mario Kart", "SNES", 1992, 3, 30.00);
         in.addStock(marioKart);
-        Game sonic = new Game("Sonic", "Mega Drive", 1991, 0, 10.00);
+        Game sonic = new Game("Sonic", "Mega Drive", 1991, 0, 10.75);
         in.addStock(sonic);
         Game sf2 = new Game("Street Fighter II", "SNES", 1992, 0, 12.00);
         in.addStock(sf2);
@@ -45,17 +45,17 @@ public class GameShop {
         in.printInventory();
         System.out.println();
 
-        String transact;
+        // tells the transaction class what games being transacted, who's doing it, and what transaction it is
 
-        ts.transactionMade(sonic, c2, transact = "trade");
+        ts.transactionMade(sonic, c2, "trade");
 
-        ts.transactionMade(sf2, c3, transact = "trade");
+        ts.transactionMade(sf2, c3, "trade");
 
-        ts.transactionMade(zelda, c2, transact = "buy");
+        ts.transactionMade(zelda, c2, "buy");
 
-        ts.transactionMade(marioKart, c3, transact = "buy");
+        ts.transactionMade(marioKart, c3, "buy");
 
-        ts.transactionMade(banjoKazoo, c1, transact = "buy");
+        ts.transactionMade(banjoKazoo, c1, "buy");
 
         ts.printTransactions();
         System.out.println();

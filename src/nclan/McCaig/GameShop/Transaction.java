@@ -9,17 +9,20 @@ public class Transaction {
     private String transactionDate;
     private String customerName;
     private String gameTitle;
-    private Transaction[] transDoc = new Transaction[5];
+    private String gamePrice;
+    private Transaction[] transDoc = new Transaction[5]; // ← will have to change this if adding new game for now :(
     private int i = 0;
 
     public Transaction(String transactionType,
                        String transactionDate,
                        String customerName,
-                       String gameTitle) {
+                       String gameTitle,
+                       String gamePrice) {
         this.transactionType = transactionType;
         this.transactionDate = transactionDate;
         this.customerName = customerName;
         this.gameTitle = gameTitle;
+        this.gamePrice = gamePrice;
     }
 
     public Transaction() {
@@ -30,9 +33,13 @@ public class Transaction {
         return transactionType +
                 ", " + transactionDate +
                 ", " + customerName +
-                ", " + gameTitle;
+                ", " + gameTitle+
+                ", " + gamePrice;
     }
 
+    /**
+     * prints out the transaction history
+     */
     public void printTransactions() {
         for (Transaction t : transDoc) {
             System.out.println(t);
@@ -40,6 +47,7 @@ public class Transaction {
     }
 
     /**
+     * this sets up the transactions, and adds to the transaction history
      *
      * @param g the game
      * @param c the customer
@@ -49,12 +57,13 @@ public class Transaction {
         if (s.equals("trade")) {
             g.setQuantity(g.getQuantity() + 1);
             c.setDiscountEligible(true);
-            transDoc[i++] = new Transaction("Trade-In", "06/10/25", c.getName(), g.getName());
+            transDoc[i++] = new Transaction("Trade-In", "06/10/25", c.getName(), g.getName(), "£" + g.getPrice());
         } else if (s.equals("buy")) {
             double gPrice = c.isDiscountEligible() ? g.getPrice() * 0.90 : g.getPrice();
+            // ↑ basically an "if else." if a customer is eligible, then gPrice = discounted price, else gPrice = regular price
             g.setQuantity(g.getQuantity() - 1);
             c.setDiscountEligible(false);
-            transDoc[i++] = new Transaction("purchase", "06/10/25", c.getName(), g.getName());
+            transDoc[i++] = new Transaction("purchase", "06/10/25", c.getName(), g.getName(), "£" + gPrice);
         }
     }
 }

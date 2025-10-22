@@ -14,8 +14,8 @@ public class Inventory {
 
     /**
      *
-     * @param g the game
-     * @return adding the game to a list
+     * @param g the games
+     * @return adding the game to a list, whilst ensuring the limit of 10
      */
     public boolean addStock(Game g) {
         if (g.getQuantity() > 10) {

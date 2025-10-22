@@ -9,14 +9,14 @@ public class Customer {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public boolean isDiscountEligible() {
         return discountEligible;
     }
 
+    /**
+     *
+     * @param eligible states if the customer is eligible for a discount or not
+     */
     public void setDiscountEligible(boolean eligible) {
         this.discountEligible = eligible;
     }
