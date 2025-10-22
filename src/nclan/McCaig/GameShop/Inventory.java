@@ -10,7 +10,7 @@ public class Inventory {
     }
 
     public boolean addStock(Game g) {
-        if(limitStock(1))
+        if(limitStock(g.getQuantity()))
             return allGames.add(g);
         else
             return false;
@@ -22,6 +22,14 @@ public class Inventory {
             return true;
         } else
             return false;
+    }
+
+    public void printInventory() {
+        for (Game g : allGames) {
+            if (!(g.getQuantity() <= 0)) {
+                System.out.println(g);
+            }
+        }
     }
 
 

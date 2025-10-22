@@ -42,9 +42,7 @@ public class Customer {
     @Override
     public String toString() {
         return  "name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", discountEligible=" + discountEligible +
-                '}';
+                ", address='" + address;
     }
 
 }
