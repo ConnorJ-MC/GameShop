@@ -10,7 +10,7 @@ public class Transaction {
     private String customerName;
     private String gameTitle;
     private String gamePrice;
-    private Transaction[] transDoc = new Transaction[5]; // ← will have to change this if adding new game for now :(
+    private Transaction[] transDoc = new Transaction[365]; // ← will have to change this if adding new game for now :(
     private int i = 0;
 
     public Transaction(String transactionType,
@@ -33,7 +33,7 @@ public class Transaction {
         return transactionType +
                 ", " + transactionDate +
                 ", " + customerName +
-                ", " + gameTitle+
+                ", " + gameTitle +
                 ", " + gamePrice;
     }
 
@@ -42,7 +42,7 @@ public class Transaction {
      */
     public void printTransactions() {
         for (Transaction t : transDoc) {
-            System.out.println(t);
+            if (t != null) System.out.println(t);
         }
     }
 
